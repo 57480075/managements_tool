@@ -10,8 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
     <%# /google fontsの読み込み %>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="app/assets/stylesheets/style.css" rel="stylesheet">
   </head>
   <body>
+    <header class="page-header">
+      <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link"%></h1>
+      <ul class="main-nav">
+      <% if user_signed_in? %>
+        <li><%= link_to 'ログアウト', destroy_user_session_path,  method: :delete,class:"link"%></li>
+      <% else %>
+        <li><%= link_to '新規登録', new_user_registration_path, class:"link"%></li>
+        <li><%= link_to 'ログイン', root_path, class:"link"%></li>
+      <% end %>
+      </ul>
+    </header>
   </body>
 </html>
