@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* ----------共通部分のCSS-------------- */
+
+html{
+  font-size: 100%;
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.7;
+  color: #432;
+  background-color: #f6f0cc;
+}
+
+.main-nav{
+  display: flex;
+  list-style: none;
+  font-size: 1.25rem;
+}
+
+.main-nav li{
+  margin-left: 36px;
+  margin-top: 10px;
+}
+
+.link{
+  text-decoration: none;
+  color: #432;
+}
+
+.link:hover{
+  color: #3aacad;
+  transition: 0.2s;
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid black;
+}
