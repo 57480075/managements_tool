@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link "%></h1>
+
+  <div class="container">
+
+  <h2>会員情報入力</h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.label "メールアドレス", class: "form-font"%><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可", class: "form"%>
+    </div>
+
+    <div class="field">
+      <%= f.label "パスワード", class: "form-font" %><br />
+      <%= f.password_field :password, autocomplete: "current-password" , class: "form"%>
+    </div>
+
+
+
+    <div class="actions">
+      <%= f.submit "ログイン" ,class: "btn"%>
+    </div>
+  <% end %>
+
+  </div>
+
+
+</div>
