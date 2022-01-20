@@ -2,14 +2,14 @@
   <header class="second-header">
     <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link "%></h1>
   </header>
-  <div class="container-open">
+  <div class="container-close">
 
-  <h2 class="title">OPEN CHECK入力</h2>
+  <h2 class="title">CLOSE CHECK入力</h2>
 
-  <%= form_with model: @task_open, url: tools_path, local: true do |f| %>
+  <%= form_with model: @task_close, url: task_closes_path, local: true do |f| %>
 
     <div class="field">
-      <%= f.label "開店時の清掃", class: "form-font"%><br />
+      <%= f.label "閉店時の清掃", class: "form-font"%><br />
       <%= f.collection_select(:clean_id, Clean.all, :id, :name, {}, class: "form" ) %>
     </div>
 
@@ -24,8 +24,8 @@
     </div>
 
     <div class="field">
-      <%= f.label "本日の売り上げ目標", class: "form-font"%><br />
-      <%= f.text_field :sales_target,   value: "¥", class: "form"%>
+      <%= f.label "本日の売り上げ報告", class: "form-font"%><br />
+      <%= f.text_field :sales_result,   value: "¥", class: "form"%>
     </div>
 
     <div class="field">
@@ -35,7 +35,7 @@
 
 
     <div class="actions">
-      <%= f.submit "報告する" ,class: "btn"%>
+      <%= f.submit "報告する" ,class: "btn-close"%>
     </div>
 
 

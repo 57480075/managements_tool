@@ -57,22 +57,6 @@
 
 
 
-## task_middle_months テーブル
-
-| Column        | Type       | Option                         |
-| ------------- | ---------- | ------------------------------ |
-| middle_result | string     | null: false                    |
-| middle_report | integer    | null: false                    |
-| checker       | string     | null: false                    |
-| user          | references | null: false, foreign_key :true |
-
-### Association
-
-- belongs_to :user
-
-
-
-
 ## task_end_months テーブル
 
 | Column     | Type       | Option                         |
