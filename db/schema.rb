@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_155055) do
+ActiveRecord::Schema.define(version: 2022_01_20_151923) do
+
+  create_table "task_closes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "clean_id", null: false
+    t.integer "money_id", null: false
+    t.integer "trouble_id", null: false
+    t.string "sales_result", null: false
+    t.string "checker", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_task_closes_on_user_id"
+  end
 
   create_table "task_opens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "clean_id", null: false
