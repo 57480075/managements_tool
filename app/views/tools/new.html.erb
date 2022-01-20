@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <header class="second-header">
+    <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link "%></h1>
+  </header>
+  <div class="container-open">
+
+  <h2 class="title">開店準備入力</h2>
+
+  <%= form_with model: @task_open, url: tools_path, local: true do |f| %>
+
+    <div class="field">
+      <%= f.label "開店時の清掃", class: "form-font"%><br />
+      <%= f.collection_select(:clean_id, Clean.all, :id, :name, {}, class: "form" ) %>
+    </div>
+
+    <div class="field">
+      <%= f.label "釣銭準備金の確認", class: "form-font"%><br />
+      <%= f.collection_select(:money_id, Money.all, :id, :name, {}, class: "form" ) %>
+    </div>
+
+    <div class="field">
+      <%= f.label "設備・機器の点検", class: "form-font"%><br />
+      <%= f.collection_select(:trouble_id, Trouble.all, :id, :name, {}, class: "form" ) %>
+    </div>
+
+    <div class="field">
+      <%= f.label "本日の売り上げ目標", class: "form-font"%><br />
+      <%= f.text_field :sales_target,   value: "¥", class: "form"%>
+    </div>
+
+    <div class="field">
+      <%= f.label "確認者(フルネーム)", class: "form-font" %><br />
+      <%= f.text_field :checker, class: "form"%>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit "報告する" ,class: "btn"%>
+    </div>
+
+
+  <% end %>
+  </div>
+</div>

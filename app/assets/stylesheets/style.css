@@ -22,7 +22,7 @@ body{
 }
 
 
-/* ----------トップページのヘッダー-------------- */
+/* ----------トップページのCSS-------------- */
 
 
 .main-nav{
@@ -57,7 +57,27 @@ body{
   font-weight: bold;
 }
 
-/* ----------新規登録ページのCSS-------------- */
+.container-main{
+  margin: 50px 50px;
+  background-color: #e2eba3;
+  width: 800px;
+  padding: 200px 0;
+}
+
+.btn-task{
+  padding: 15px 30px;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  background-color: #eaf6fd;
+  border: 5px solid #432;
+  margin-top: 10px;
+}
+
+.task{
+  margin-bottom: 50px;
+}
+
+/* ----------登録ページのCSS-------------- */
 
 .container{
   background-color: #e2eba3;
@@ -103,4 +123,19 @@ body{
   cursor: pointer;
   opacity: 0.5;
   transition: 0.3s;
+}
+
+
+/* ----------カテゴリ選択のCSS-------------- */
+
+.container-open{
+  background-color: #f5cfc8;
+  padding: 30px 0 ;
+  width: 800px;
+  margin: 0 auto;
+}
+
+
+.title{
+padding: 20px;
 }
