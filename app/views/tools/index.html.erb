@@ -14,25 +14,39 @@
     <link href="app/assets/stylesheets/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link"%></h1>
-      <ul class="main-nav">
-      <% if user_signed_in? %>
-        <li class = "user-name"><%= current_user.name %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path,  method: :delete,class:"link"%></li>
-      <% else %>
-        <li><%= link_to '新規登録', new_user_registration_path, class:"link"%></li>
-        <li><%= link_to 'ログイン', user_session_path, class:"link"%></li>
-      <% end %>
-      </ul>
-    </header>
-    <div class="container-main">
-      <div class="task">
-        <h1><%= link_to 'OPEN CHECK', new_tool_path, class:"link btn-task"%></h1>
+    <% if user_signed_in? %>
+      <header class="page-header">
+        <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link"%></h1>
+        <ul class="main-nav">
+        <% if user_signed_in? %>
+          <li class = "user-name"><%= current_user.name %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path,  method: :delete,class:"link"%></li>
+        <% else %>
+          <li><%= link_to '新規登録', new_user_registration_path, class:"link"%></li>
+          <li><%= link_to 'ログイン', user_session_path, class:"link"%></li>
+        <% end %>
+        </ul>
+      </header>
+      <div class="container-main">
+        <div class="task">
+          <h1><%= link_to 'OPEN CHECK', new_tool_path, class:"link btn-task"%></h1>
+        </div>
+        <div class="task">
+          <h1><%= link_to 'CLOSE CHECK', new_task_close_path, class:"link btn-task"%></h1>
+        </div>
       </div>
-      <div class="task">
-        <h1><%= link_to 'CLOSE CHECK', new_task_close_path, class:"link btn-task"%></h1>
+    <% else %>
+      <header class="page-header">
+        <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link"%></h1>
+      </header>
+      <div class="container-top">
+        <div class="task">
+          <h1><%= link_to 'SIGN IN', new_user_registration_path, class:"link btn-task"%></h1>
+        </div>
+        <div class="task">
+          <h1><%= link_to 'LOG IN', user_session_path, class:"link btn-task"%></h1>
+        </div>
       </div>
-    </div>
+    <% end %>
   </body>
 </html>
