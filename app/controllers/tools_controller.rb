@@ -1,4 +1,5 @@
 class ToolsController < ApplicationController
+
   def index
   end
 
@@ -13,6 +14,10 @@ class ToolsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @task_opens = TaskOpen.all.order(created_at: :desc)
   end
 
   private
