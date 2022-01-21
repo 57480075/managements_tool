@@ -1,6 +1,7 @@
 class TaskClosesController < ApplicationController
   def new
     @task_close = TaskClose.new
+    redirect_to root_path unless user_signed_in?
   end
 
   def create
@@ -14,6 +15,7 @@ class TaskClosesController < ApplicationController
 
   def show
     @task_close = TaskClose.all.order(created_at: :desc)
+    redirect_to root_path unless user_signed_in?
   end
 
   private

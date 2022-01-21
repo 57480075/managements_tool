@@ -5,6 +5,7 @@ class ToolsController < ApplicationController
 
   def new
     @task_open = TaskOpen.new
+    redirect_to root_path unless user_signed_in?
   end
 
   def create
@@ -18,6 +19,7 @@ class ToolsController < ApplicationController
 
   def show
     @task_opens = TaskOpen.all.order(created_at: :desc)
+    redirect_to root_path unless user_signed_in?
   end
 
   private

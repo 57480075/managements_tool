@@ -212,6 +212,13 @@ body{
   transition: 0.3s;
 }
 
+.btn-open:hover{
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+
 .btn-close:hover{
   cursor: pointer;
   opacity: 0.5;
