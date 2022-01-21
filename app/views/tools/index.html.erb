@@ -46,7 +46,7 @@
               <h1><%= link_to 'OPEN CHECK 履歴', tool_path(:id), class:"link btn-sub"%></h1>
             </div>
             <div class="task">
-              <h1><%= link_to 'CLOSE CHECK 履歴', new_task_close_path, class:"link btn-sub"%></h1>
+              <h1><%= link_to 'CLOSE CHECK 履歴', task_close_path(:id), class:"link btn-sub"%></h1>
             </div>
             <div class="task edit-user">
               <h1><%= link_to 'Edit User', edit_user_path(current_user), class:"link btn-sub"%></h1>
