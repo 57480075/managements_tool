@@ -13,9 +13,7 @@
 
 - has_many :task_opens
 - has_many :task_closes
-- has_many :task_middle_months
-- has_many :task_end_months
-- has_many :memos
+
 
 
 
@@ -65,21 +63,6 @@
 | end_report | integer    | null: false                    |
 | checker    | string     | null: false                    |
 | user       | references | null: false, foreign_key :true |
-
-### Association
-
-- belongs_to :user
-
-
-
-
-## memos テーブル
-
-| Column  | Type       | Option                         |
-| ------- | ---------- | ------------------------------ |
-| title   | string     | null: false                    |
-| content | integer    | null: false                    |
-| user    | references | null: false, foreign_key :true |
 
 ### Association
 
