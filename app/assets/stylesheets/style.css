@@ -186,6 +186,16 @@ body{
   margin-top: 10px;
 }
 
+.btn-open{
+  padding: 7px 15px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  background-color: #c0def0;
+  border: 1px solid #432;
+  width: 150px;
+  margin-top: 10px;
+}
+
 .btn-close{
   padding: 7px 15px;
   font-size: 1.3rem;
@@ -221,5 +231,31 @@ body{
 
 
 .title{
-padding: 20px;
+  padding: 20px;
+}
+
+/* ----------一覧ページのCSS-------------- */
+
+.container-show-title{
+  background-color: #c5a3cb;
+
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 100px;
+}
+
+.container-show{
+  background-color: #A3CCB1;
+  padding: 10px 0 ;
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+.task-day{
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
 }

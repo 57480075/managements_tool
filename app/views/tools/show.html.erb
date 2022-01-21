@@ -1,0 +1,20 @@
+
+<div class="wrapper">
+  <header class="second-header">
+    <h1 class="main-title"><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link "%></h1>
+  </header>
+  <div class="container-show-title">
+    <h2 class="title">OPEN CHECK 履歴</h2>
+  </div>
+    <% @task_opens.each do |t|%>
+      <div class="container-show">
+        <h2 class="task-day"><%= t.created_at.to_s(:datetime_jp) %></h2><br>
+        【開店時の清掃】<%= t.clean.name%><br>
+        【釣銭準備金の確認】<%= t.money.name%><br>
+        【設備・機器の点検】<%= t.trouble.name%><br>
+        【本日の売り上げ目標】<%= t.sales_target%><br>
+        【確認者】<%= t.checker%><br>
+      </div>
+    <% end %>
+
+</div>
