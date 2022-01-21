@@ -12,6 +12,10 @@ class TaskClosesController < ApplicationController
     end
   end
 
+  def show
+    @task_close = TaskClose.all.order(created_at: :desc)
+  end
+
   private
   def task_close_params
     params.require(:task_close).permit(:clean_id, :money_id, :trouble_id, :sales_result, :checker).merge(user_id: current_user.id)
