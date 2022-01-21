@@ -51,28 +51,41 @@ body{
   justify-content: space-around;
   border-bottom: 2px solid black;
   padding: 5px 0;
+  margin-bottom: 50px;
 }
 
 .user-name{
   font-weight: bold;
 }
 
+.container-top{
+  margin: 0 auto;
+  background-color: #e2eba3;
+  width: 800px;
+  padding: 200px 0;
+  border-radius: 100px;
+  border: 5px solid #432;
+}
+
 .container-main{
-  margin: 50px 50px;
+  margin: 0 auto;
   background-color: #e2eba3;
   width: 800px;
   padding: 200px 0;
   border-radius: 100px;
 }
 
+
 .btn-task{
-  padding: 15px 30px;
+  padding: 15px 150px;
   font-size: 1.8rem;
   border-radius: 5px;
   background-color: #eaf6fd;
   border: 5px solid #432;
   margin-top: 10px;
 }
+
+
 
 .task{
   margin-bottom: 50px;
