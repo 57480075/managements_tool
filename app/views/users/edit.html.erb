@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <header class="second-header">
+    <h1 class="main-title"><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link "%></h1>
+  </header>
+  <div class="container">
+    <h2 class="title">編集情報入力</h2>
+
+      <%= form_with model: current_user, local: true do |f|%>
+
+
+      <div class="field">
+        <%= f.label "店舗名", class: "form-font" %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "例) 〇〇店", class: "form" %>
+      </div>
+
+      <div class="field">
+        <%= f.label "メールアドレス", class: "form-font" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可", class: "form" %>
+      </div>
+
+
+        <div class='actions'>
+          <%= f.submit "更新する", class: 'btn'%>
+        </div>
+      <% end %>
+</div>
+</div>
