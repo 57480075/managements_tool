@@ -16,7 +16,7 @@
   <body>
     <% if user_signed_in? %>
       <header class="page-header">
-        <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link"%></h1>
+        <h1 class="main-title"><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link"%></h1>
         <ul class="main-nav">
         <% if user_signed_in? %>
           <li class = "user-name"><%= current_user.name %></li>
@@ -27,17 +27,36 @@
         <% end %>
         </ul>
       </header>
-      <div class="container-main">
-        <div class="task">
-          <h1><%= link_to 'OPEN CHECK', new_tool_path, class:"link btn-task"%></h1>
+      <div class="top-wrapper">
+        <div class="container-main">
+          <h2 class="sub-title">REPORT</h2>
+          <div class="tasks">
+            <div class="task">
+              <h1><%= link_to 'OPEN CHECK', new_tool_path, class:"link btn-task"%></h1>
+            </div>
+            <div class="task">
+              <h1><%= link_to 'CLOSE CHECK', new_task_close_path, class:"link btn-task"%></h1>
+            </div>
+          </div>
         </div>
-        <div class="task">
-          <h1><%= link_to 'CLOSE CHECK', new_task_close_path, class:"link btn-task"%></h1>
+        <div class="container-sub">
+          <h2 class="sub-title">MANAGEMENT</h2>
+          <div class="tasks">
+            <div class="task">
+              <h1><%= link_to 'OPEN CHECK 履歴', new_tool_path, class:"link btn-sub"%></h1>
+            </div>
+            <div class="task">
+              <h1><%= link_to 'CLOSE CHECK 履歴', new_task_close_path, class:"link btn-sub"%></h1>
+            </div>
+            <div class="task edit-user">
+              <h1><%= link_to 'Edit User', new_task_close_path, class:"link btn-sub"%></h1>
+            </div>
+          </div>
         </div>
       </div>
     <% else %>
       <header class="page-header">
-        <h1><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link"%></h1>
+        <h1 class="main-title"><%= link_to 'MANEGEMENTS TOOL', root_path, class: "link"%></h1>
       </header>
       <div class="container-top">
         <div class="task">

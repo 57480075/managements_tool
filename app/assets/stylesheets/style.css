@@ -21,6 +21,9 @@ body{
   text-align: center;
 }
 
+.main-title{
+  letter-spacing: 3px;
+}
 
 /* ----------トップページのCSS-------------- */
 
@@ -34,6 +37,16 @@ body{
 .main-nav li{
   margin-left: 36px;
   margin-top: 10px;
+}
+
+.sub-title{
+  border-bottom: 2px solid rgb(85, 64, 44);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+  font-size: 1.2rem;
+  /* font-weight: normal; */
+  letter-spacing: 7px;
 }
 
 .link{
@@ -64,15 +77,28 @@ body{
   width: 800px;
   padding: 200px 0;
   border-radius: 100px;
-  border: 5px solid #432;
 }
 
 .container-main{
   margin: 0 auto;
   background-color: #e2eba3;
-  width: 800px;
-  padding: 200px 0;
-  border-radius: 100px;
+  width: 600px;
+  border-radius: 50px;
+  height: 600px;
+}
+
+.container-sub{
+  margin-left: 20px;
+  background-color: #f5cfc8;
+  border-radius: 50px;
+  width: 300px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-wrapper{
+  display: flex;
 }
 
 
@@ -81,14 +107,32 @@ body{
   font-size: 1.8rem;
   border-radius: 5px;
   background-color: #eaf6fd;
-  border: 5px solid #432;
+  border: 4px solid #432;
   margin-top: 10px;
+}
+
+.btn-sub{
+  font-size: 20px;
+  background-color: #eaf6fd;
+  border: 3px solid #432;
+  border-radius: 5px;
+  padding: 10px 10px;
 }
 
 
 
 .task{
   margin-bottom: 50px;
+}
+
+.tasks{
+  padding-top: 130px;
+}
+
+
+
+.edit-user{
+  padding-top: 30px;
 }
 
 /* ----------登録ページのCSS-------------- */
