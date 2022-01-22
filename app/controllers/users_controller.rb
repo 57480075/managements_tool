@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
+
   def edit
     redirect_to root_path unless user_signed_in?
   end
 
   def update
+    binding.pry
     if current_user.update(user_params)
       redirect_to root_path
     else
@@ -15,4 +17,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email)
   end
+
 end
