@@ -60,13 +60,13 @@
       </header>
       <div class="container-top">
         <div class="task">
-          <h1><%= link_to 'SIGN IN', new_user_registration_path, class:"link btn-task"%></h1>
+          <h1><%= link_to 'ログイン', user_session_path, class:"link btn-task-in"%></h1>
         </div>
         <div class="task">
           <h2>O R</h2>
         </div>
         <div class="task">
-          <h1><%= link_to 'LOG IN', user_session_path, class:"link btn-task"%></h1>
+          <h1><%= link_to '新規登録', new_user_registration_path, class:"link btn-task-new"%></h1>
         </div>
       </div>
     <% end %>
